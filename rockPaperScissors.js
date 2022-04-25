@@ -69,33 +69,22 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-
 //define constants for game play function
 let playerSelection = "";
 let computerSelection = "";
 let computerScore = 0;
 let playerScore = 0;
 
-
 //console.log(playRound(playerSelection, computerSelection));
 //function for a single round of rock, paper, scissors
+
 function game() {
-    playerSelection = humanPlay ();
-    computerSelection = computerPlay ();
-    playRound(playerSelection, computerSelection);
-    playerSelection = humanPlay ();
-    computerSelection = computerPlay ();
-    playRound(playerSelection, computerSelection);
-    playerSelection = humanPlay ();
-    computerSelection = computerPlay ();
-    playRound(playerSelection, computerSelection);
-    playerSelection = humanPlay ();
-    computerSelection = computerPlay ();
-    playRound(playerSelection, computerSelection);
-    playerSelection = humanPlay ();
-    computerSelection = computerPlay ();
-    playRound(playerSelection, computerSelection);
-}
+    for (let i=0; i<5; i++) {
+        playerSelection = humanPlay ();
+        computerSelection = computerPlay ();
+        playRound(playerSelection, computerSelection);
+    }
+};
 
 console.log(game(computerScore, playerScore));
 
